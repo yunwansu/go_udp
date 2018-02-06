@@ -21,4 +21,4 @@ and then make pipline.conf file
 
 run this command on ubuntu 16.04
 
-sudo bin/logstash -f /etc/logstash/first-pipeline.conf --config.reload.automatic
+        sudo bin/logstash -f /etc/logstash/first-pipeline.conf --config.reload.automatic
