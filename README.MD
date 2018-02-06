@@ -2,7 +2,7 @@ go lang UDP 예제입니다.
 
 go lang UDP Example
 
-i'm installed logstash 6.1.3 using APT on ubuntu 16.04
+I was installed logstash 6.1.3 using APT on ubuntu 16.04
 
 follow this url(logstash 6.x getting start)
 https://www.elastic.co/guide/en/logstash/6.x/installing-logstash.html
