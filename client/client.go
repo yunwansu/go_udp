@@ -2,9 +2,10 @@ package main
 
 import (
 	"encoding/json"
+	"time"
 	"fmt"
 	"net"
-	"os"
+	// "os"
 )
 
 type ServerInfo struct {
@@ -34,8 +35,11 @@ func main() {
 		fmt.Println("Error : ", err)
 	}
 
-	os.Stdout.Write(data)
-	udpConn.Write(data)
+	for {
+		// os.Stdout.Write(data)
+		udpConn.Write(data)
+		time.Sleep(time.Duration(time.Second))
+	}
 
 	err2 := udpConn.Close()
 	if err2 != nil {
