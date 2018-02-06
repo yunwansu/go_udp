@@ -1,9 +1,17 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"net"
+	"os"
 )
+
+type ServerInfo struct {
+	Cpu string
+	Memory string
+	Network string
+}
 
 func main() {
 	udp, err := net.ResolveUDPAddr("udp", "127.0.0.1:4885")
@@ -16,9 +24,17 @@ func main() {
 		fmt.Printf("Dial UDP Error ~> %d\n", err1)
 	}
 
-	data := []byte("hello UDP!")
+	serverInfo := ServerInfo{Cpu : "Intel® Xeon® Platinum 8180M Processor",
+							 Memory : "PC3-12800",
+						 	 Network : "RTL8111D"}
 
+	data, err := json.Marshal(serverInfo)
+	// data := []byte("hello UDP!")
+	if err != nil {
+		fmt.Println("Error : ", err)
+	}
 
+	os.Stdout.Write(data)
 	udpConn.Write(data)
 
 	err2 := udpConn.Close()
