@@ -28,12 +28,11 @@ and then make pipline.conf file
 
 run this command on ubuntu 16.04
 
-        sudo bin/logstash -f /etc/logstash/first-pipeline.conf --config.reload.automatic
-
+	sudo bin/logstash -f /etc/logstash/first-pipeline.conf --config.reload.automatic
 	cd elasticsearch-6.1.3
- 	./elasticsearch
+	./elasticsearch
 
 result image 
-every second send from go program with udp to logstash
+every second send from go program with udp to logstash and logstash is send to elasticsearch
 
 ![alt text](https://github.com/yunwansu/go_udp/blob/master/elasticsearch_result.png)
