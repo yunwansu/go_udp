@@ -14,22 +14,22 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/_installation.ht
 
 and then make first-pipline.conf(I used this name and it does not matter what name) file
 
-        input {
-                udp {
-                        port => "4885"
-                }
-        }
+	input {
+		udp {
+			port => "4885"
+		}
+	}
 	filter {
-        	json {
-                	source => "message"               #parse message field
-                	remove_field => ["message"]	  #and remove message field
-        	}
- 	}
-        output {
-                elasticsearch {
-                	hosts => ["http://127.0.0.1:9200"]
-       		}
-        }
+		json {
+			source => "message"               #parse message field
+			remove_field => ["message"]	  #and remove message field
+		}
+	}
+	output {
+		elasticsearch {
+			hosts => ["http://127.0.0.1:9200"]
+		}
+	}
 
 
 run this command on ubuntu 16.04
