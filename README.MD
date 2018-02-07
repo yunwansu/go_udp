@@ -37,4 +37,4 @@ result image
 every second send from go program with udp to logstash
 
 ![alt text](https://github.com/yunwansu/go_udp/blob/master/result.png)
-![alt text](https://github.com/yunwansu/go_udp/blob/master/elastic_result.png)
+![alt text](https://github.com/yunwansu/go_udp/blob/master/elasticsearch_result.png)
