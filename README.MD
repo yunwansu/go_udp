@@ -36,5 +36,4 @@ run this command on ubuntu 16.04
 result image 
 every second send from go program with udp to logstash
 
-![alt text](https://github.com/yunwansu/go_udp/blob/master/result.png)
 ![alt text](https://github.com/yunwansu/go_udp/blob/master/elasticsearch_result.png)
